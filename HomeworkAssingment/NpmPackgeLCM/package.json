@@ -1,0 +1,11 @@
+{
+  "name": "leastcommonfactor",
+  "version": "1.0.0",
+  "description": "find or LCM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "priyanka Shaw",
+  "license": "ISC"
+}
