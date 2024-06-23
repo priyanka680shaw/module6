@@ -123,6 +123,10 @@ console.log("ddirectory name Absolute path" , __dirname);
 console.log("absolute file name" , __filename);
 const fullPath = path.join(__dirname , "files" , "../../../ddownloads", "index.js");
 console.log(fullPath)
-console.log(path.parse(fullPath))
+console.log(path.parse(fullPath))//parse obj coonvert 
+//many more methods present geekster notes read
 //2.path usefull methodes
 
+/*** 
+    Readd Line 
+**/
