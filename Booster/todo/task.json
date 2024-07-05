@@ -1,1 +1,44 @@
-[{"name":"roshni","class":"12","school":"Sun Rise","present":true}]
+[
+    {
+        "name": "piky",
+        "class": "12",
+        "school": "Sun Rise",
+        "present": true
+    },
+    {
+        "name": "priyanka",
+        "class": "12",
+        "school": "Sun Rise",
+        "present": true
+    },
+    {
+        "name": "mohan",
+        "class": "12",
+        "school": "Sun Rise",
+        "present": true
+    },
+    {
+        "name": "kajal",
+        "class": "12",
+        "school": "Sun Rise",
+        "present": true
+    },
+    {
+        "name": "payal",
+        "class": "12",
+        "school": "Sun Rise",
+        "present": true
+    },
+    {
+        "name": "sonal",
+        "class": "12",
+        "school": "Sun Rise",
+        "present": true
+    },
+    {
+        "name": "priyanka",
+        "class": "12",
+        "school": "Sun Rise",
+        "present": true
+    }
+]

@@ -64,7 +64,7 @@ function listalltask(){
 function completedTask(indexNo){
     const tasks = getMyTasks();
     if(tasks[indexNo-1]){
-        tasks[indexNo-1].present = flase;
+        tasks[indexNo-1].present = false;
         saveMyTask(tasks);
         console.log("upddateSuccessfully")
     }
