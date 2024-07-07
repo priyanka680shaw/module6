@@ -10,7 +10,7 @@ function errorHandler(err , req , res , next){
     })
 }
 
-app.post  ("/userregister" , (req , res , next)=>{
+app.post  ("/register" , (req , res , next)=>{
     
     try {
         const { firstName, lastName, password, email, phoneNumber } = req.body;
