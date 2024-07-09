@@ -6,6 +6,7 @@ function loggingMiddldewere(req , res ,next){
     console.log(`REquest Method : ${req.method}`)
     console.log(`Request Url : ${req.url}`);
     console.log(`Request Time : ${new Date()}`)
+    console.log(`Request IP : ${req.ip}`)
     next();
 }
 /***********************/
