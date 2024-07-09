@@ -86,7 +86,7 @@ app.use(express.static("images"))// not forr api cheak
 
 
 app.get("/login" , (req , res)=>{
-    console.log(req.quer )
+    console.log(req.query )
     res.json({
     
         message : "Login Api Called"

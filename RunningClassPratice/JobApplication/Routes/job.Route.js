@@ -4,7 +4,7 @@ const jobApiController = require("../controller/job.Controller");
 
 router.get("/api/jobs" , jobApiController.getJobApi)
 
-router.post("/api.post" , jobApiController.postJobApi )
+router.post("/api/jobs" , jobApiController.postJobApi )
 
 router.put("/api/jobs:id" , jobApiController.putJobApi)
 
