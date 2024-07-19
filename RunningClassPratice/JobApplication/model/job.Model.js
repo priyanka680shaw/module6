@@ -11,7 +11,7 @@ const jobSchema = new monngoose.Schema(
             required  :true,
             unique : true
         },
-        slalar : {
+        salary : {
             type : Number,
             required  :true
         },

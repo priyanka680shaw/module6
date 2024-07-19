@@ -19,10 +19,11 @@ const jobRoutes = require("./Routes/job.Route")
 
 //middleweares
 app.use(express.json()) // to reciving body from post url 
+//error handling function 
 function errorHandling(err , req , res , next){
     res.json({
         status  :"false",
-        message : "Getting Erroe",
+        message : "Getting Error !",
         err : err.name
     })
 }
