@@ -1,5 +1,6 @@
 const userModel = require("../model/user.module")
 const { v4: uuidv4 } = require('uuid');
+const jwt = require("jsonwebtoken")
 const login = async (req , res)=>{
     try{
         const userExist = await userModel.findOne({email : req.body.email}) //findone method use to find first matching request  
@@ -17,12 +18,24 @@ const login = async (req , res)=>{
             })
         }
        //cheack user  is loged in or not for that add a token using uuid for token and saved it in to DB 
+       const currentTimeInSecond = Math.floor(new Date().getTime)
+       const expirtTimeInSecond = currentTimeInSecond+3600 // convert it into 1 hr
             res.status(200).json({
                 status : "true",
                 message  :"Your Profile is matched !",
                 token : userExist.token,
              })
-             const token = uuidv4()
+             /***JWT TOKEN***/
+             //const token = uuidv4()  //  it is not secure so for the secure token use jjwt token
+             //jwt.sing(payload , security) = >2 parameters payload is  user data important info(x);
+             const jwtpayload = {
+                userId : userExist._id,
+                role : userExist.role,
+                mobileNo : userExist.mobileNo,
+                exp : expirtTimeInSecond
+
+             }
+             const token = jwt.sign(jwtpayload , "MY_SECURITY_KEY")
              console.log(token)
              //update in db token id if user login , after getting the token id usre will able to prooceed to the product list  
         const update = await userModel.findByIdAndUpdate(userExist._id , {$set : {token}}) 
@@ -38,7 +51,7 @@ const singUp = async (req ,res)=>{
     console.log(req.body)
    // const newlyInserted = await userModel.create(req.body)
     try{
-        const newlyInserted = await userModel.create(req.body)
+        const newlyInserted = await userModel.create({...req.body , role : "ADMIN"})
     res.json({
         status : "true",
         message  :"Singup called!"

@@ -61,7 +61,7 @@ const putJobApi = async (req ,res)=>{
     }
 //find jis ki salary 30000 hai usko usko update kro
     const filterObj = {
-        //in sideie filter filter llkittne bhi lha sakte ho and or kuch bhi  
+        //in sideie filter filter kittne pr bhi lga sakte ho and or kuch bhi  
        // salary : 30000 hard coded
        salary  : whattoupdate
     }

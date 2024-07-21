@@ -7,7 +7,7 @@ const express = require("express")
 const nodemailer = require("nodemailer");
 const { error } = require("console");
 const { release } = require("os");
-
+//mail implimentation
 const transport = nodemailer.createTransport({
     host : "localhost",
     port : "1025",
@@ -67,12 +67,12 @@ const generatedShaeableLink = async(req , res)=>{
 //dowmloadable Link
 const downloadfile = async(req , res)=>{
     const fileId = req.params.fileId;
-    console.log(fileId)
+   // console.log(fileId)
     const fileData = await fileModel.findById(fileId)
     if(!fileData){
         return res.status(400).end("invalid Link !")
     }
-    console.log("getting Data" , fileData)
+    //console.log("getting Data" , fileData)
     const path = `Uploads/${fileData.newName}`;
     console.log("path" , path)
     res.download(path , fileData.originalName)
@@ -81,6 +81,9 @@ const downloadfile = async(req , res)=>{
     //     message : "download link working properly !"   
     // })
 }
+
+
+//email section start from here
 
 const sendEmail = async (req ,res)=>{
     console.log("send email" , req.body)
@@ -117,7 +120,7 @@ const sendEmail = async (req ,res)=>{
         else{
             return res.json({
                 success : true,
-                message : "successfully send Email "
+                message : "successfully send Email"
             })
         }
     })

@@ -39,3 +39,9 @@ index->routes->controller->model
  */
 
 //all the query part or curd related operatins is going to be written in the model model connect to  controller 
+
+Api links : 
+get : http://localhost:4000/api/jobs
+post  :http://localhost:4000/api/jobs
+put : http://localhost:4000/api/jobs/salary ====> http://localhost:4000/api/jobs/51000
+delete : http://localhost:4000/api/jobs/(id) ===> http://localhost:4000/api/jobs/669a4354bc5e407e39f28c27
